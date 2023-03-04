@@ -5,6 +5,7 @@ const SettingsPage = () => {
   return (
     <>
       <h2>Manage Themes</h2>
+
       <div className={styles.container}>
         <ThemeInfo
           name="GitHub Dark"
@@ -13,6 +14,7 @@ const SettingsPage = () => {
           theme="github-dark"
           description="GitHub theme for VS Code"
         />
+
         <ThemeInfo
           name="Dracula"
           icon="/dracula.png"
@@ -20,6 +22,7 @@ const SettingsPage = () => {
           theme="dracula"
           description="Official Dracula Theme. A dark theme for many editors, shells, and more."
         />
+
         <ThemeInfo
           name="Ayu Dark"
           icon="/ayu.png"
@@ -27,6 +30,7 @@ const SettingsPage = () => {
           theme="ayu-dark"
           description="A simple theme with bright colors."
         />
+
         <ThemeInfo
           name="Ayu Mirage"
           icon="/ayu.png"
@@ -34,6 +38,7 @@ const SettingsPage = () => {
           theme="ayu-mirage"
           description="A simple theme with bright colors."
         />
+
         <ThemeInfo
           name="Nord"
           icon="/nord.png"
@@ -41,6 +46,7 @@ const SettingsPage = () => {
           theme="nord"
           description="An arctic, north-bluish clean and elegant Visual Studio Code theme."
         />
+
         <ThemeInfo
           name="Night Owl"
           icon="/night-owl.png"

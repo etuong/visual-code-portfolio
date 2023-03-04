@@ -1,89 +1,77 @@
 import Link from "next/link";
+
+import { BsEnvelope } from "react-icons/bs";
+import { SlPencil } from "react-icons/sl";
+import { TfiWorld } from "react-icons/tfi";
+import { VscCode } from "react-icons/vsc";
+import { VscAccount } from "react-icons/vsc";
+import { VscSettingsGear } from "react-icons/vsc";
+
 import { useRouter } from "next/router";
-import FilesIcon from "./icons/FilesIcon";
-import GithubIcon from "./icons/GithubIcon";
-import CodeIcon from "./icons/CodeIcon";
-import PencilIcon from "./icons/PencilIcon";
-import MailIcon from "./icons/MailIcon";
-import AccountIcon from "./icons/AccountIcon";
-import SettingsIcon from "./icons/SettingsIcon";
+import { VscFiles } from "react-icons/vsc";
 import styles from "../styles/Sidebar.module.css";
 
 const sidebarTopItems = [
   {
-    Icon: FilesIcon,
+    Icon: VscFiles,
     path: "/",
   },
   {
-    Icon: GithubIcon,
-    path: "/github",
+    Icon: TfiWorld,
+    path: "/world",
   },
   {
-    Icon: CodeIcon,
+    Icon: VscCode,
     path: "/projects",
   },
   {
-    Icon: PencilIcon,
+    Icon: SlPencil,
     path: "/articles",
   },
   {
-    Icon: MailIcon,
+    Icon: BsEnvelope,
     path: "/contact",
   },
 ];
 
 const sidebarBottomItems = [
   {
-    Icon: AccountIcon,
+    Icon: VscAccount,
     path: "/about",
   },
   {
-    Icon: SettingsIcon,
+    Icon: VscSettingsGear,
     path: "/settings",
   },
 ];
 
-const Sidebar = () => {
+const renderSideBarItem = (items) => {
   const router = useRouter();
+  return items.map(({ Icon, path }) => (
+    <Link href={path} key={path} index={path}>
+      <div
+        className={`${styles.iconContainer} ${
+          router.pathname === path && styles.active
+        }`}
+      >
+        <Icon
+          fill={
+            router.pathname === path
+              ? "rgb(225, 228, 232)"
+              : "rgb(106, 115, 125)"
+          }
+          className={styles.icon}
+        />
+      </div>
+    </Link>
+  ));
+};
 
+const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.sidebarTop}>
-        {sidebarTopItems.map(({ Icon, path }) => (
-          <Link href={path} key={path}>
-            <div
-              className={`${styles.iconContainer} ${
-                router.pathname === path && styles.active
-              }`}
-            >
-              <Icon
-                fill={
-                  router.pathname === path
-                    ? "rgb(225, 228, 232)"
-                    : "rgb(106, 115, 125)"
-                }
-                className={styles.icon}
-              />
-            </div>
-          </Link>
-        ))}
-      </div>
-      <div className={styles.sidebarBottom}>
-        {sidebarBottomItems.map(({ Icon, path }) => (
-          <div className={styles.iconContainer}>
-            <Link href={path} key={path}>
-              <Icon
-                fill={
-                  router.pathname === path
-                    ? "rgb(225, 228, 232)"
-                    : "rgb(106, 115, 125)"
-                }
-                className={styles.icon}
-              />
-            </Link>
-          </div>
-        ))}
-      </div>
+      <div>{renderSideBarItem(sidebarTopItems)}</div>
+      <div>{renderSideBarItem(sidebarBottomItems)}</div>
     </aside>
   );
 };
