@@ -1,10 +1,10 @@
-import { CiWarning } from "react-icons/ci";
-import { MdOutlineCancel } from "react-icons/md";
-import { BsCheck2All } from "react-icons/bs";
+import { VscWarning } from "react-icons/vsc";
+import { VscError } from "react-icons/vsc";
+import { VscCheckAll } from "react-icons/vsc";
 import { VscBell } from "react-icons/vsc";
 import { TbBrandNextjs } from "react-icons/tb";
 import { VscSourceControl } from "react-icons/vsc";
-import styles from "../styles/Bottombar.module.css";
+import styles from "../styles/BottomBar.module.css";
 
 const BottomBar = () => {
   return (
@@ -21,9 +21,9 @@ const BottomBar = () => {
         </a>
 
         <div className={styles.section}>
-          <MdOutlineCancel className={styles.icon} />
+          <VscError className={styles.icon} />
           <p className={styles.errorText}>0</p>&nbsp;&nbsp;
-          <CiWarning className={styles.icon} />
+          <VscWarning className={styles.icon} />
           <p>0</p>
         </div>
       </div>
@@ -35,7 +35,7 @@ const BottomBar = () => {
         </div>
 
         <div className={styles.section}>
-          <BsCheck2All className={styles.icon} />
+          <VscCheckAll className={styles.icon} />
           <p>Prettier</p>
         </div>
 

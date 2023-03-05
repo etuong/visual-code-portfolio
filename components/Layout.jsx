@@ -1,7 +1,7 @@
-import Titlebar from "../components/Titlebar";
-import Sidebar from "../components/Sidebar";
-import Explorer from "../components/Explorer";
-import BottomBar from "../components/Bottombar";
+import Titlebar from "./Titlebar";
+import Sidebar from "./Sidebar";
+import Explorer from "./Explorer";
+import BottomBar from "./BottomBar";
 import Tabsbar from "./Tabsbar";
 import styles from "../styles/Layout.module.css";
 

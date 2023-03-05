@@ -40,6 +40,7 @@ const Explorer = () => {
       <p className={styles.title}>Explorer</p>
 
       <div>
+        
         <input
           type="checkbox"
           className={styles.checkbox}
@@ -74,6 +75,7 @@ const Explorer = () => {
             </Link>
           ))}
         </div>
+
       </div>
     </div>
   );
