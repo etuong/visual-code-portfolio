@@ -4,10 +4,11 @@ import Explorer from "./Explorer";
 import BottomBar from "./BottomBar";
 import Tabsbar from "./Tabsbar";
 import styles from "../styles/Layout.module.css";
+import { ExplorerProvider } from "../contexts/ExplorerContext";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <ExplorerProvider>
       <Titlebar />
       <div className={styles.main}>
         <Sidebar />
@@ -18,7 +19,7 @@ const Layout = ({ children }) => {
         </div>
       </div>
       <BottomBar />
-    </>
+    </ExplorerProvider>
   );
 };
 

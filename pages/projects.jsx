@@ -1,16 +1,28 @@
-import ProjectCard from "../components/ProjectCard";
 import { getProjects } from "./api/projects";
-import styles from "../styles/ProjectsPage.module.css";
+import { useEffect, useContext } from "react";
+import { ExplorerContext } from "../contexts/ExplorerContext";
 
 const ProjectsPage = ({ projects }) => {
+  const { setExplorerItems } = useContext(ExplorerContext);
+
+  useEffect(() => {
+    setExplorerItems([
+      {
+        name: "2235435345.jsx",
+        path: "/",
+        icon: "react_icon.svg",
+      },
+      {
+        name: "asdfsafd.html",
+        path: "/about",
+        icon: "html_icon.svg",
+      },
+    ]);
+  }, []);
+
   return (
     <>
       <h3>Stuff I've Built So Far</h3>
-      <div className={styles.container}>
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
     </>
   );
 };
