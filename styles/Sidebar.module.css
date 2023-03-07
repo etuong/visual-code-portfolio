@@ -1,5 +1,5 @@
-.sidebar {
-  background: var(--sidebar-bg);
+.sideBar {
+  background: var(--sideBar-bg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,7 +14,7 @@
 }
 
 .iconContainer:hover {
-  background: var(--sidebar-hover-bg);
+  background: var(--sideBar-hover-bg);
 }
 
 .active {
@@ -30,19 +30,19 @@
 }
 
 @media screen and (min-width: 2000px) {
-  .sidebar {
+  .sideBar {
     width: 2.5vw;
   }
 }
 
 @media screen and (max-width: 1100px) {
-  .sidebar {
+  .sideBar {
     width: 6vw;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .sidebar {
+  .sideBar {
     width: 8vw;
   }
   .icon {
@@ -53,7 +53,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .sidebar {
+  .sideBar {
     width: 10vw;
   }
   .icon {

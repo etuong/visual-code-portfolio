@@ -1,7 +1,7 @@
 .bottomBar {
-  background: var(--bottombar-bg);
+  background: var(--bottomBar-bg);
   height: 25px;
-  border-top: 1px solid var(--bottombar-border);
+  border-top: 1px solid var(--bottomBar-border);
   color: rgb(225, 228, 232);
   padding: 0 0.5rem;
   display: flex;
@@ -35,7 +35,7 @@
 }
 
 .section:hover {
-  background: var(--bottombar-hover-bg);
+  background: var(--bottomBar-hover-bg);
 }
 
 @media screen and (max-width: 600px) {

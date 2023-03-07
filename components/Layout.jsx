@@ -1,20 +1,20 @@
-import Titlebar from "./Titlebar";
-import Sidebar from "./Sidebar";
+import TitleBar from "./TitleBar";
+import SideBar from "./SideBar";
 import Explorer from "./Explorer";
 import BottomBar from "./BottomBar";
-import Tabsbar from "./Tabsbar";
+import TabsBar from "./TabsBar";
 import styles from "../styles/Layout.module.css";
 import { ExplorerProvider } from "../contexts/ExplorerContext";
 
 const Layout = ({ children }) => {
   return (
     <ExplorerProvider>
-      <Titlebar />
+      <TitleBar />
       <div className={styles.main}>
-        <Sidebar />
+        <SideBar />
         <Explorer />
         <div style={{ width: "100%" }}>
-          <Tabsbar />
+          <TabsBar />
           <main className={styles.content}>{children}</main>
         </div>
       </div>

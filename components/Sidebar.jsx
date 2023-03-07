@@ -9,9 +9,9 @@ import { VscSettingsGear } from "react-icons/vsc";
 
 import { useRouter } from "next/router";
 import { VscFiles } from "react-icons/vsc";
-import styles from "../styles/Sidebar.module.css";
+import styles from "../styles/SideBar.module.css";
 
-const sidebarTopItems = [
+const sideBarTopItems = [
   {
     Icon: VscFiles,
     path: "/",
@@ -34,7 +34,7 @@ const sidebarTopItems = [
   },
 ];
 
-const sidebarBottomItems = [
+const sideBarBottomItems = [
   {
     Icon: VscAccount,
     path: "/about",
@@ -67,13 +67,13 @@ const renderSideBarItem = (items) => {
   ));
 };
 
-const Sidebar = () => {
+const SideBar = () => {
   return (
-    <aside className={styles.sidebar}>
-      <div>{renderSideBarItem(sidebarTopItems)}</div>
-      <div>{renderSideBarItem(sidebarBottomItems)}</div>
+    <aside className={styles.sideBar}>
+      <div>{renderSideBarItem(sideBarTopItems)}</div>
+      <div>{renderSideBarItem(sideBarBottomItems)}</div>
     </aside>
   );
 };
 
-export default Sidebar;
+export default SideBar;

@@ -1,9 +1,9 @@
 import Image from "next/image";
-import styles from "../styles/Titlebar.module.css";
+import styles from "../styles/TitleBar.module.css";
 
-const Titlebar = () => {
+const TitleBar = () => {
   return (
-    <section className={styles.titlebar}>
+    <section className={styles.titleBar}>
       <Image
         src="/vscode_icon.svg"
         alt="VSCode Icon"
@@ -29,9 +29,8 @@ const Titlebar = () => {
         <span className={styles.maximize}></span>
         <span className={styles.close}></span>
       </div>
-      
     </section>
   );
 };
 
-export default Titlebar;
+export default TitleBar;
