@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../styles/Tab.module.css";
+import { VscClose } from "react-icons/vsc";
 
 const Tab = ({ icon, filename, path }) => {
   const router = useRouter();
@@ -13,6 +14,7 @@ const Tab = ({ icon, filename, path }) => {
       >
         <Image src={icon} alt={filename} height={18} width={18} />
         <p>{filename}</p>
+        <VscClose className={styles.close} />
       </div>
     </Link>
   );

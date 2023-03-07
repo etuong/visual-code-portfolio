@@ -1,13 +1,18 @@
 .tab {
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem;
   background: var(--tab-bg);
-  color: #ececec;
+  color: #8f8f8f;
   display: flex;
   align-items: center;
   border: 1px solid var(--tab-border);
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 0.9rem;
   cursor: pointer;
+  min-width: 140px;
+}
+
+.tab:hover .close {
+  display: inline;
 }
 
 .tab p {
@@ -15,7 +20,23 @@
 }
 
 .active {
+  color: #ececec;
   border-top: 1px solid var(--accent-color);
   background: var(--tab-active-bg);
   border-bottom: none;
+}
+
+.active .close {
+  display: inline;
+}
+
+.close {
+  display: none;
+  margin-left: auto;
+  font-size: 18px;
+}
+
+.close:hover {
+  background: var(--bottomBar-hover-bg);
+  border-radius: 5px;
 }
